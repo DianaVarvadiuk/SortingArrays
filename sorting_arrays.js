@@ -21,18 +21,17 @@ function getModa(...numbers) {
 function getAverage(...numbers) {
    const dataAverage = getEntireNumbers(numbers);
    const resultAverage = dataAverage.reduce((accumulator, element) => {
-       //let suma = 0;
        if(Number.isInteger(element)){
-        accumulator+= element;
+            suma += element;
        }
-       return  accumulator;
+       return suma + accumulator;
    })
    return resultAverage / dataAverage.length;
 }
 console.log("getAverage",getAverage(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 //function 5
 function filterEvenNumbers(...numbers){
-    const filternumber = numbers.filter(number => number%2!== 0)
+    const filternumber = numbers.filter(number => number %2!== 0)
     return filternumber;
 }
 console.log("filterEvenNumbers: ",filterEvenNumbers(1, 2, 3, 4, 5, 6));
@@ -44,7 +43,7 @@ function countPositiveNumbers(...numbers) {
 console.log("countPositiveNumbers:",countPositiveNumbers(1, -2, 3, -4, -5, 6));
 //function 7
 function getDividedByFive(...numbers){
-    const getFive = numbers.filter(number => number%5 === 0 )
+    const getFive = numbers.filter(number => number % 5 === 0 )
     return getFive;
 }
 console.log("getDividedByFive:",getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
